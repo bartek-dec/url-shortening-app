@@ -2,6 +2,7 @@
 
 :root {
     --cyan: hsl(180, 66%, 49%);
+    --cyan-hover: hsl(180, 72%, 73%);
     --dark-violet: hsl(257, 27%, 26%);
     --red: hsl(0, 87%, 67%);
     --gray: hsl(0, 0%, 75%);
@@ -10,11 +11,12 @@
     --very-dark-violet: hsl(260, 8%, 14%);
     --white: #eee;
 
-    --border-radius-sm: 1rem;
+    --border-radius-sm: 1.25rem;
     --border-radius-lg: 6rem;
 
     --transition: 0.25s all linear;
-    --max-width: 1000px;
+    --width: 85vw;
+    --max-width: 1120px;
 }
 
 *, ::before, ::after {
@@ -37,3 +39,213 @@ img {
     width: 100%;
     display: block;
 }
+
+ul {
+    list-style-type: none;
+}
+
+/*=============*/
+/*= Navbar*/
+/*=============*/
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.nav-center {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.nav-header {
+    padding: 4rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-img {
+    width: 12rem;
+}
+
+.nav-btn {
+    background-color: transparent;
+    color: var(--gray);
+    border: none;
+    font-size: 3rem;
+    transition: var(--transition);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn:hover {
+    transform: scale(1.15);
+}
+
+.nav-content {
+    padding: 0 2.5rem;
+    background-color: var(--dark-violet);
+    border-radius: var(--border-radius-sm);
+
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.show-links {
+    height: 388px;
+}
+
+.nav-links {
+    padding-top: 3rem;
+}
+
+.nav-link {
+    display: block;
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--gray);
+}
+
+.nav-line {
+    margin: 1.5rem 0;
+    background-color: var(--gray);
+    height: 1px;
+    border: none;
+}
+
+.nav-btns {
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem 0;
+}
+
+.login-btn {
+    color: var(--white);
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.login-btn:hover {
+    color: var(--gray);
+}
+
+.signup-btn {
+    width: 100%;
+    background-color: var(--cyan);
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1.5rem;
+    border: none;
+    border-radius: var(--border-radius-lg);
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.signup-btn:hover {
+    background-color: var(--cyan-hover);
+}
+
+@media screen and (min-width: 840px) {
+    .nav-center {
+        width: 100%;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 3rem;
+
+        display: flex;
+    }
+
+    .nav-header {
+      padding: 5rem 0;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-content {
+        align-self: center;
+        height: auto;
+        width: 100%;
+        background-color: transparent;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        padding-top: 0;
+
+        display: flex;
+        gap: 0 2rem;
+    }
+
+    .nav-link {
+        color: var(--very-dark-violet);
+        font-weight: 500;
+    }
+
+    .nav-link:hover {
+        color: var(--gray);
+    }
+
+    .nav-line {
+        display: none;
+    }
+
+    .login-btn {
+        color: var(--very-dark-violet);
+    }
+
+    .login-btn:hover {
+        color: var(--gray);
+    }
+
+    .nav-btns {
+        padding-bottom: 0;
+        flex-direction: row;
+        gap: 0 3rem;
+    }
+
+    .signup-btn {
+        margin-bottom: 0;
+        width: 15rem;
+    }
+}
+
+
+
+
+
+
+
+
+
