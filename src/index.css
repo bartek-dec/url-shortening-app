@@ -95,10 +95,10 @@ ul {
     padding: 0 2.5rem;
     background-color: var(--dark-violet);
     border-radius: var(--border-radius-sm);
+    transition: height 0.25s linear;
 
     height: 0;
     overflow: hidden;
-    transition: var(--transition);
 }
 
 .show-links {
@@ -183,7 +183,7 @@ ul {
     }
 
     .nav-header {
-      padding: 5rem 0;
+        padding: 4rem 0;
     }
 
     .nav-btn {
