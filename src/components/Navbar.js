@@ -31,7 +31,7 @@ const Navbar = () => {
                         </li>
                     </ul>
 
-                    <hr className='nav-line'/>
+                    <hr className='line'/>
 
                     <div className='nav-btns'>
                         <button type='button' className='login-btn' onClick={() => dispatch(closeNavbar())}>Login
