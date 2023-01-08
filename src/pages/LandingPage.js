@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar, Hero, Statistics} from '../components';
+import {Navbar, Hero, Statistics, GetStarted} from '../components';
 
 const LandingPage = () => {
     return (
@@ -7,6 +7,7 @@ const LandingPage = () => {
             <Navbar/>
             <Hero/>
             <Statistics/>
+            <GetStarted/>
         </>
     );
 };
