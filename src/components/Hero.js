@@ -1,4 +1,5 @@
 import React from 'react';
+import Form from "./Form";
 
 const Hero = () => {
     return (
@@ -10,6 +11,8 @@ const Hero = () => {
                     are performing</p>
                 <button type='button' className=' btn get-started-btn'>Get Started</button>
             </div>
+
+            <Form/>
         </section>
     );
 };
