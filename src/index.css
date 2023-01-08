@@ -497,17 +497,97 @@ ul {
     }
 }
 
+/*=============*/
+/*= Footer
+/*=============*/
+.footer {
+    background-color: var(--very-dark-violet);
+    padding: 6rem 0;
+    color: var(--white);
+    text-align: center;
+}
 
+.footer-heading {
+    margin-bottom: 4rem;
+}
 
+.footer-features, .footer-resources, .footer-company {
+    margin-bottom: 4rem;
+}
 
+.footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
 
+.footer li {
+    font-size: 1.6rem;
+    color: var(--gray);
+    line-height: 2;
+    cursor: pointer;
+    transition: var(--transition);
+}
 
+.footer li:hover {
+    color: var(--cyan);
+}
 
+.footer-icons {
+    width: 50%;
+    max-width: 25rem;
+    margin: 0 auto;
 
+    display: flex;
+    justify-content: space-between;
+}
 
+.footer-link {
+    display: block;
+}
 
+.footer-img {
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--white);
+    transition: var(--transition);
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.footer-img:hover {
+    color: var(--cyan);
+}
+
+@media screen and (min-width: 650px) {
+    .footer-container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .footer{
+        text-align: left;
+    }
+    .footer-container {
+        display: grid;
+        grid-template-columns: 3fr 2fr 2fr 2fr 3fr;
+    }
+
+    .footer-container div{
+        margin-bottom: 0;
+    }
+
+    .footer-icons {
+        align-self: flex-start;
+        width: 100%;
+        justify-content: space-around;
+    }
+}
 
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar, Hero, Statistics, GetStarted} from '../components';
+import {Navbar, Hero, Statistics, GetStarted, Footer} from '../components';
 
 const LandingPage = () => {
     return (
@@ -8,6 +8,7 @@ const LandingPage = () => {
             <Hero/>
             <Statistics/>
             <GetStarted/>
+            <Footer/>
         </>
     );
 };

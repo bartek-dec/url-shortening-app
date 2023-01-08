@@ -2,5 +2,6 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Statistics from "./Statistics";
 import GetStarted from "./GetStarted";
+import Footer from "./Footer";
 
-export {Navbar, Hero, Statistics, GetStarted}
+export {Navbar, Hero, Statistics, GetStarted, Footer}
