@@ -1,11 +1,12 @@
 import React from 'react';
-import {Navbar, Hero} from '../components';
+import {Navbar, Hero, Statistics} from '../components';
 
 const LandingPage = () => {
     return (
         <>
             <Navbar/>
             <Hero/>
+            <Statistics/>
         </>
     );
 };
