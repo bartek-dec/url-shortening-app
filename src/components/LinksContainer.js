@@ -11,8 +11,9 @@ const LinksContainer = () => {
         return (
             <section className='links-container'>
                 <Error/>
-                {links.map((link, index) => {
-                    return <Link key={index} {...link}/>
+                {links.map((item, index) => {
+                    const {link, shortLink} = item;
+                    return <Link key={index} id={index} link={link} shortLink={shortLink}/>
                 })}
             </section>
         );
@@ -21,8 +22,9 @@ const LinksContainer = () => {
     return (
         <section className='links-container'>
             {isLoading && <Spinner/>}
-            {links.map((link, index) => {
-                return <Link key={index} {...link}/>
+            {links.map((item, index) => {
+                const {link, shortLink} = item;
+                return <Link key={index} id={index} link={link} shortLink={shortLink}/>
             })}
         </section>
     );
