@@ -20,6 +20,7 @@ const Link = ({id, link, shortLink}) => {
             console.log(error);
         }
     }
+
     const handleClick = (e) => {
         const btnId = Number(e.target.dataset.id);
         if (btnId === id) {

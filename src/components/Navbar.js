@@ -11,6 +11,7 @@ const Navbar = () => {
     const linksRef = useRef(null);
     const lineRef = useRef(null);
     const btnsRef = useRef(null);
+    const hrLineMargins = 30;
 
     useEffect(() => {
         const linksHeight = linksRef.current.getBoundingClientRect().height;
@@ -18,7 +19,7 @@ const Navbar = () => {
         const btnsHeight = btnsRef.current.getBoundingClientRect().height;
 
         if (isOpen) {
-            navContentRef.current.style.height = `${linksHeight + lineHeight + btnsHeight + 30}px`;
+            navContentRef.current.style.height = `${linksHeight + lineHeight + btnsHeight + hrLineMargins}px`;
         } else {
             navContentRef.current.style.height = '0px';
         }
