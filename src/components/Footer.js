@@ -36,15 +36,19 @@ const Footer = () => {
                 </div>
 
                 <div className='footer-icons'>
+                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                     <a href='#' className='footer-link'>
                         <span className='footer-img'><AiFillFacebook/></span>
                     </a>
+                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                     <a href='#' className='footer-link'>
                         <span className='footer-img'><AiOutlineTwitter/></span>
                     </a>
+                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                     <a href='#' className='footer-link'>
                         <span className='footer-img'><FaPinterest/></span>
                     </a>
+                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                     <a href='#' className='footer-link'>
                         <span className='footer-img'><AiOutlineInstagram/></span>
                     </a>

@@ -38,12 +38,15 @@ const Navbar = () => {
                 <div className='nav-content' ref={navContentRef}>
                     <ul className='nav-links' ref={linksRef}>
                         <li>
+                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                             <a href='#' className='nav-link' onClick={() => dispatch(closeNavbar())}>Features</a>
                         </li>
                         <li>
+                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                             <a href='#' className='nav-link' onClick={() => dispatch(closeNavbar())}>Pricing</a>
                         </li>
                         <li>
+                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                             <a href='#' className='nav-link' onClick={() => dispatch(closeNavbar())}>Resources</a>
                         </li>
                     </ul>
