@@ -76,7 +76,6 @@ ul {
 }
 
 .nav-center {
-
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
@@ -120,10 +119,6 @@ ul {
 
     height: 0;
     overflow: hidden;
-}
-
-.show-links {
-    height: 377px;
 }
 
 .nav-links {
@@ -208,7 +203,7 @@ ul {
 
     .nav-content {
         align-self: center;
-        height: auto;
+        height: auto !important;
         width: 100%;
         background-color: transparent;
         padding-right: 0;
