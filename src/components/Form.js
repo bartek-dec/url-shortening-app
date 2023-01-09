@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setInputLink, setIsInputEmpty, getShortLink, setIsError} from '../features/form/formSlice';
 
 const Form = () => {
-    const {inputLink, isInputEmpty} = useSelector((state) => state.form);
+    const {inputLink, isInputEmpty, isLoading} = useSelector((state) => state.form);
     const dispatch = useDispatch();
 
     const handleChange = (e) => {
@@ -30,7 +30,7 @@ const Form = () => {
                            onChange={handleChange}/>
                     <p className={isInputEmpty ? 'alert show' : 'alert'}>Please add a link</p>
                 </div>
-                <button type='submit' className='form-btn' onClick={handleSubmit}>Shorten it!</button>
+                <button disabled={isLoading} type='submit' className='form-btn' onClick={handleSubmit}>Shorten it!</button>
             </form>
         </section>
     );

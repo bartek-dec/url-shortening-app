@@ -412,6 +412,10 @@ ul {
     background-color: var(--cyan-hover);
 }
 
+.form-btn:disabled{
+    background-color: var(--cyan-hover);
+}
+
 @media screen and (min-width: 650px) {
     .form-section {
         padding: 3.5rem 4rem;
