@@ -1,13 +1,14 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {setInputLink, setIsInputEmpty, getShortLink} from '../features/form/formSlice';
+import {setInputLink, setIsInputEmpty, getShortLink, setIsError} from '../features/form/formSlice';
 
 const Form = () => {
     const {inputLink, isInputEmpty} = useSelector((state) => state.form);
     const dispatch = useDispatch();
 
-    const handleChange= (e) => {
+    const handleChange = (e) => {
         dispatch(setIsInputEmpty(false));
+        dispatch(setIsError(false));
         dispatch(setInputLink(e.target.value))
     }
 

@@ -804,8 +804,23 @@ ul {
     }
 }
 
+/*==============*/
+/*= Error
+/*==============*/
+.message-section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    height: 8rem;
+    background-color: var(--gray-light);
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.message-heading {
+    text-align: center;
+}
 
 
 
