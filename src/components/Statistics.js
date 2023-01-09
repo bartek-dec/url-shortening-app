@@ -2,14 +2,11 @@ import React from 'react';
 import brand from '../images/icon-brand-recognition.svg';
 import records from '../images/icon-detailed-records.svg';
 import custom from '../images/icon-fully-customizable.svg';
-import Link from './Link';
 
 const Statistics = () => {
+
     return (
         <section className='stats'>
-            <Link/>
-            <Link/>
-            <Link/>
             <div className='stats-info'>
                 <h2 className='stats-heading'>Advanced Statistics</h2>
                 <p className='stats-text'>Track how your links are performing across the web with our advanced
