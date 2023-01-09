@@ -3,13 +3,21 @@ import axios from "axios";
 
 const url = 'https://api.shrtco.de/v2/shorten?url';
 
+const getLocalStorage = () => {
+    const links = localStorage.getItem('links');
+    if (!links) {
+        return [];
+    }
+    return JSON.parse(links);
+}
+
 const initialState = {
     isLoading: false,
     inputLink: '',
     isInputEmpty: false,
     isError: false,
     errorMsg: '',
-    links: []
+    links: getLocalStorage()
 }
 
 export const getShortLink = createAsyncThunk('form/getShortLink', async (link, thunkAPI) => {
@@ -42,14 +50,13 @@ const formSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(getShortLink.pending, (state) => {
-            state.isloading = true;
             state.isError = false;
         }).addCase(getShortLink.fulfilled, (state, action) => {
             state.isLoading = false;
-            console.log(action.payload);
             const shortLink = action.payload.result.full_short_link;
             const link = state.inputLink;
-            state.links = [...state.links, {link, shortLink}];
+            state.links = [{link, shortLink}, ...state.links];
+            localStorage.setItem('links', JSON.stringify(state.links));
         }).addCase(getShortLink.rejected, (state, action) => {
             state.isLoading = false;
             state.isError = true;
