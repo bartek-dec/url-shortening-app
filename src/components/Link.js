@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-const Link = ({id, link, shortLink}) => {
+const Link = ({link, shortLink}) => {
     const [isCopied, setIsCopied] = useState(false);
 
     useEffect(() => {
@@ -22,10 +22,7 @@ const Link = ({id, link, shortLink}) => {
     }
 
     const handleClick = (e) => {
-        const btnId = Number(e.target.dataset.id);
-        if (btnId === id) {
-            setIsCopied(true);
-        }
+        setIsCopied(true);
         copyToClipboard(shortLink);
     }
 
@@ -34,7 +31,7 @@ const Link = ({id, link, shortLink}) => {
             <h3 className='link'>{link}</h3>
             <hr className='line'/>
             <h3 className='link-short'>{shortLink}</h3>
-            <button data-id={id} type='button' className={isCopied ? 'link-copied' : 'link-btn'}
+            <button type='button' className={isCopied ? 'link-copied' : 'link-btn'}
                     onClick={handleClick}>{isCopied ? 'Copied!' : 'Copy'}</button>
         </article>
     );

@@ -13,7 +13,7 @@ const LinksContainer = () => {
                 <Error/>
                 {links.map((item, index) => {
                     const {link, shortLink} = item;
-                    return <Link key={index} id={index} link={link} shortLink={shortLink}/>
+                    return <Link key={index} link={link} shortLink={shortLink}/>
                 })}
             </section>
         );
